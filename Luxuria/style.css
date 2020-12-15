@@ -1,0 +1,467 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: whitesmoke;
+	margin:0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*large central logo*/
+.logocontainer{
+	text-align: center;
+	max-width:100%;
+	margin: 0 auto;
+	background-color:black;
+	display: block;
+	padding-top: .5em;
+  }
+
+  .logo{
+	margin:0;
+	}
+
+  .logocontainer img{
+		margin-bottom: .8em;
+		}
+
+/* Menu style*/
+
+	nav{
+		background: black;
+	}
+
+  nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	text-align: center;
+  }
+
+  nav li {
+	display: inline-block;
+	color:white;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+
+  nav a{
+    font-family: sans-serif;
+		color:white;
+		text-decoration: none;
+		display: block;
+		padding: .75em 1.75em;
+	}
+
+	nav li:hover {
+		text-decoration: underline;
+		}
+
+		nav li:hover li{
+		text-decoration: none;
+		}
+
+	/*mini logo in the navbar*/
+	.mini_logo img{
+		opacity: 0.5;
+	}
+
+	.mini_logo img:hover{
+		opacity: 1;
+	}
+/*style for each column in the drop down menu*/
+	.column1 a{
+		color:black;
+	}
+
+	.column1 a:hover{
+		color: rgb(104, 104, 104);
+	}
+
+	.column1 p{
+		display: inline-block;
+	}
+
+  .column1 ul li a{
+	color:black;
+	}
+
+	.column1{
+	  float: left;
+		width: 33%;
+		text-align: left;
+
+	}
+
+/*style for drop down menu*/
+  .menu-sub {
+	position: absolute;
+	left: 0;
+	background: white;
+	width: 100%;
+	display:none;
+	opacity: 0;
+	color: black;
+	padding: 2em;
+	z-index: 1;
+  }
+
+  nav li:hover .menu-sub {
+	display: block;
+	opacity: 0.85;
+	
+  }
+
+  .menu-sub li{
+		display: block;
+		width:50%;
+  }
+
+  .menu-sub p, .menu-sub ul{
+	  text-align: left;
+		margin-left: 30%;
+  }
+
+  .menu-sub a{
+	  padding: 5px;
+  }
+
+  .category{
+	  margin: 2.5em 0 0.25em;
+  }
+
+  .category:first-of-type{
+	  margin-top:0;
+  }
+
+  .menu-sub a::after{
+	  content: "";
+	  display: block;
+	  width: 0;
+	  height:1px;
+	  background-color: black;
+	  transition: width 250ms;
+  }
+
+  .menu-sub li a:hover::after{
+	  width: 100%;
+	  transition: width 500ms;
+	}
+
+	/*scroll fixed navbar*/
+  .sticky {
+		background-color: black;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		}
+
+
+/*Article style*/
+/*Parllax scrollin feature banner*/
+  .pimg1{
+	  position: relative;
+	  opacity: 1;
+	  background-position: center;
+	  background-size: cover;
+		background-repeat: no-repeat;
+		height: 90vh;
+	  background-attachment: fixed;
+	}
+
+	@media(max-width:568px){
+	  .pimg1{
+		background-attachment: scroll;
+	  }
+	}
+
+/*text in the center of banner*/
+	.ptext{
+	  position: absolute;
+	  top: 50%;
+	  width: 100%;
+	  text-align: center;
+	  font-size: 27px;
+	  letter-spacing: 8px;
+	  text-transform: uppercase;
+	}
+
+	.ptext .border{
+	  background-color: rgba(17, 17, 17, 0.55);
+	  color:#fff;
+	  padding: 20px;
+	  border-radius: 10px;
+	}
+
+/*Product style*/
+.products{
+    text-align:center;
+    margin: 1em 0 3em 0;
+}
+
+.product_list{
+    position:relative;
+    display:inline-block;
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    overflow:hidden;
+    margin: 1em .5em;
+    width:23%;
+}
+/*container for the images for prducts*/
+.content{
+    padding:0;
+}
+
+.content img{
+    display:block;
+    margin:0;
+    width:150%;
+    transform: translateX(-17%)
+}
+/*product description style*/
+.all_details{
+    position: absolute;
+    bottom:-600px;
+    background:#fff;
+    padding:10px;
+    transition: .5s;
+    height:50%;
+    width:100%;
+    opacity: 0.9;
+}
+
+.description h1{
+    margin:0;
+    padding:0;
+    width:100%;
+    font-size:1.5em;
+    text-transform: uppercase;
+}
+
+.description span{
+    font-size: 1em;
+    color:rgb(90, 89, 89);
+    text-transform: capitalize;
+}
+
+.description .details{
+    color: rgb(158,158,158);
+    font-size:14px;
+}
+
+.description{
+    height:80%;
+    overflow: auto;
+}
+
+ .shop_button a{
+	display:block;
+	padding:10px;
+	color:white;
+	margin:.5em auto 1em auto;
+	background:black;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color .5s ease;
+	border: black 2px solid;
+	font-size:20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.shop_button a:hover{
+	background-color: white;
+	color:black;
+}
+
+.product_list:hover .all_details{
+	bottom:0;
+}
+
+
+/*Footer style*/
+footer{
+  width: 100%;
+  background-color: #222;
+  padding: 20px 0px;
+  color: white;
+  margin: 0;
+}
+
+/*Footer elements container*/
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.wrapper li{
+	text-decoration: none;
+	list-style-type: none;
+	padding-top: 10px; /*Spacing between list items*/
+	font-family: Verdana, sans-serif;
+}
+
+/*Footer's Column 1*/
+.lists{
+	float: left;
+	margin-left: 9%;
+	margin-bottom: 1px;
+}
+
+.lists  h3{
+	font-family: Verdana, serif;
+	font-size: 20px;
+	text-align: center;
+	color: grey;
+}
+
+.lists a {
+	text-decoration: none;
+	color: gray;
+}
+
+.lists a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+
+.copyright_chunk{
+  text-align: center;
+  margin-bottom:0;
+}
+
+/* Footer's col 2*/
+.email_form {
+	text-align: center;
+	float: left;
+	margin-left: 8%;
+	margin-top: 2em;
+}
+
+.email_form h2, .social_media{
+	font-family: Georgia, sans-serif;
+	text-align: center;
+}
+
+.email_form input{
+  height: 3em;
+	background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  width:75%;
+}
+
+.email_form input[type=submit]{
+  width:20%;
+  margin:0.5em;
+  color:white;
+  background: #000;
+  cursor: pointer;
+}
+
+.email_form input:hover[type=submit]{
+  color:black;
+	background-color: white;
+
+}
+
+/*Footer's col 3*/
+.social_media{
+	float: left;
+	margin-left: 7%;
+}
+
+.social_media_logo li{
+	display: inline-block;
+	padding-left: 5px;
+	margin-right: 1.5em;
+}
+
+.logo_img{
+  display: block;
+}
+
+.logo_img img{
+  opacity: 0.5;
+}
+
+.logo_img img:hover{
+  opacity: 1;
+}
+
+.copyright_chunk p a{
+  color:white
+}
+
+/*Category style eg.Women's Top, Bottom and Dress*/
+ .hoverimage{
+  width: 75%;
+  opacity: 0.8;
+  margin: 2em auto;
+}
+
+.hoverimage .box{
+  position: relative;
+  width:100%;
+  height:100%;
+  margin: 1px;
+  box-sizing: border-box;
+
+}
+
+.hoverimage .box .imgBox{
+  position: relative;
+  overflow: hidden;
+}
+
+.hoverimage .box .imgBox img{
+  max-width: 100%;
+  transition: transform 2s;
+}
+
+.hoverimage .box:hover .imgBox img{
+  transform: scale(1.2);
+}
+
+.hoverimage .box .details{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,.7);
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+
+.hoverimage .box:hover .details{
+  transform: scaleY(1);
+}
+
+.hoverimage .box .details .content{
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  padding: 15px;
+  color: #fff;
+}
+
+.hoverimage .box .details .content p{
+  margin: 10px 0 0;
+  padding: 0;
+  color: white;
+  font-size: 45pt;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.abstract{
+  display: flex;
+  align-items: stretch;
+}
